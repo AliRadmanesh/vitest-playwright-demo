@@ -30,7 +30,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Start dev server
-        run: npm run dev & npx wait-on http://localhost:5173
+        run: npm run dev & npx wait-on http://localhost:5173 --timeout 60000
 
       - name: Run Playwright tests
         run: npx playwright test
