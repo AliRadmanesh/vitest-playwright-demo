@@ -1,12 +1,11 @@
-import Counter from './counter/counter'
+import { Counter } from "./counter/counter";
 
-import './App.css'
+import "./App.css";
 
-import viteLogo from '/vite.svg'
-import reactLogo from './assets/react.svg'
+import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 
 function App() {
-
   return (
     <>
       <div>
@@ -20,7 +19,7 @@ function App() {
       <h1>Vite + React</h1>
       <Counter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
