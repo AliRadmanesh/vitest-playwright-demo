@@ -4,6 +4,7 @@ import "./App.css";
 
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
+import { Form } from "./form/form";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <Counter />
+      <Form />
     </>
   );
 }
