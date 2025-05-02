@@ -1,19 +1,13 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-const Counter = () => {
-  const [count, setCount] = useState(0)
+export const Counter = () => {
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="card">
-    <button onClick={() => setCount((count) => count + 1)}>
-      count is {count}
-    </button>
-    <p>
-      Edit <code>src/App.tsx</code> and save to test HMR
-    </p>
-  </div>
-
-  )
-}
-
-export default Counter
+    <div>
+      <p data-testid="count">Count: {count}</p>
+      <button onClick={() => setCount((count) => count + 1)}>Increment</button>
+      <button onClick={() => setCount((count) => count - 1)}>Decrement</button>
+    </div>
+  );
+};
