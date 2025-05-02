@@ -24,7 +24,13 @@ jobs:
         run: npm ci
 
       - name: Run Vitest
-        run: npm run test -- --coverage
+        run: npm run test:unit -- --coverage
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Start dev server
+        run: npm run dev & npx wait-on http://localhost:5173
 
       - name: Run Playwright tests
-        run: npx playwright install --with-deps && npx playwright test
+        run: npx playwright test
